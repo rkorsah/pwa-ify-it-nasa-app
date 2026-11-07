@@ -178,6 +178,7 @@ button:hover {
   margin-top: 10px;
   padding: 5px;
   font-size: 14px;
+  color: #212121;
 }
 
 /* Placeholder content */
@@ -211,6 +212,7 @@ button:hover {
 
 .modal-content {
   background: white;
+  color: #212121;
   border-radius: 8px;
   max-width: 700px;
   width: 100%;
