@@ -51,8 +51,12 @@ async function networkFirst(request) {
 
   try {
     const response = await fetch(request);
-    if (response.ok) await cache.put(request, response.clone());
-    return response;
+    if (response.ok) {
+      await cache.put(request, response.clone()).catch(() => {});
+      return response;
+    }
+
+    return await cache.match(request) || response;
   } catch (error) {
     const cachedResponse = await cache.match(request);
     if (cachedResponse) return cachedResponse;

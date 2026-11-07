@@ -38,12 +38,22 @@ notificationBtn.addEventListener('click', async () => {
     return;
   }
 
-  const permission = await Notification.requestPermission();
-  if (permission === 'granted') {
-    new Notification('NASA Space Explorer', {
-      body: 'Your space images are ready to explore.',
-      icon: 'img/icon-192.svg'
-    });
+  try {
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      new Notification('NASA Space Explorer', {
+        body: 'Your space images are ready to explore.',
+        icon: 'img/icon-192.svg'
+      });
+      notificationBtn.textContent = 'Demo notification sent';
+    } else {
+      notificationBtn.textContent = permission === 'denied'
+        ? 'Notifications are blocked'
+        : 'Notification permission not granted';
+    }
+  } catch (error) {
+    console.error('Notification request failed:', error);
+    notificationBtn.textContent = 'Notifications are unavailable';
   }
 });
 
