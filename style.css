@@ -8,7 +8,14 @@
 /* Base page styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
+  color: #eef5ff;
+  background-color: #07182e;
+  background-image:
+    radial-gradient(1px 1px at 18px 26px, rgba(255, 255, 255, 0.72) 50%, transparent 100%),
+    radial-gradient(1px 1px at 79px 91px, rgba(125, 211, 252, 0.55) 50%, transparent 100%),
+    linear-gradient(155deg, #061326 0%, #102b49 52%, #07182e 100%);
+  background-size: 127px 139px, 181px 197px, 100% 100%;
+  background-attachment: fixed;
   padding: 20px;
 }
 
@@ -31,7 +38,7 @@ body {
 h1 {
   font-family: Verdana, sans-serif;
   font-weight: bold;
-  color: #212121;
+  color: #f4f8ff;
 }
 
 /* Logo */
@@ -55,7 +62,7 @@ h1 {
 
 .connection-status {
   width: 100%;
-  color: #8a2c0d;
+  color: #ffd0a3;
   text-align: center;
   font-weight: bold;
 }
@@ -178,7 +185,7 @@ button:hover {
   flex: 1 1 100%;
   text-align: center;
   padding: 40px;
-  color: #666;
+  color: #c8d7e8;
 }
 
 .placeholder-icon {
