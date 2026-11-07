@@ -40,6 +40,30 @@ h1 {
   margin-right: 15px;
 }
 
+.pwa-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pwa-controls button {
+  width: auto;
+}
+
+.connection-status {
+  width: 100%;
+  color: #8a2c0d;
+  text-align: center;
+  font-weight: bold;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 /* Date‐picker & button row */
 .filters {
   display: flex;

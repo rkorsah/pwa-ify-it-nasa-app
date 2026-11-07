@@ -44,7 +44,9 @@ async function fetchApodRange(startDate, endDate) {
     renderGallery(sorted);
   } catch (err) {
     console.error('Failed to fetch APOD range:', err);
-    renderMessage("Something went wrong reaching NASA's servers. Try again in a moment.");
+    renderMessage(navigator.onLine
+      ? "Something went wrong reaching NASA's servers. Try again in a moment."
+      : 'This date range is not cached yet. Reconnect to load these space images.');
   }
 }
 
