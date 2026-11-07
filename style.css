@@ -142,8 +142,8 @@ button:hover {
   flex: 1 1 100%;
   min-width: 280px;
   max-width: 500px;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -189,7 +189,7 @@ button:hover {
   margin-top: 10px;
   padding: 5px;
   font-size: 14px;
-  color: #fff;
+  color: #000;
 }
 
 /* Placeholder content */
@@ -222,8 +222,8 @@ button:hover {
 }
 
 .modal-content {
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border-radius: 8px;
   max-width: 700px;
   width: 100%;
@@ -247,11 +247,11 @@ button:hover {
 
 .modal-content h2 {
   margin-top: 16px;
-  color: #fff;
+  color: #000;
 }
 
 .modal-date {
-  color: #fff;
+  color: #000;
   font-size: 14px;
   margin: 4px 0 12px;
 }
