@@ -10,9 +10,41 @@ const gallery = document.getElementById('gallery');
 // - Restrict dates to NASA's image archive (starting from 1995)
 setupDateInputs(startInput, endInput);
 
-// Swap in your own key from api.nasa.gov — DEMO_KEY is heavily rate-limited
-const API_KEY = 'DEMO_KEY';
 const BASE_URL = 'https://api.nasa.gov/planetary/apod';
+const apiKeyInput = document.getElementById('apiKeyInput');
+const saveApiKeyBtn = document.getElementById('saveApiKeyBtn');
+
+function getStoredApiKey() {
+  const urlKey = new URLSearchParams(window.location.search).get('api_key');
+  if (urlKey) return urlKey;
+
+  const savedKey = localStorage.getItem('nasaApiKey');
+  if (savedKey) return savedKey;
+
+  return 'DEMO_KEY';
+}
+
+let API_KEY = getStoredApiKey();
+apiKeyInput.value = API_KEY === 'DEMO_KEY' ? '' : API_KEY;
+
+saveApiKeyBtn.addEventListener('click', () => {
+  const enteredKey = apiKeyInput.value.trim();
+
+  if (!enteredKey) {
+    localStorage.removeItem('nasaApiKey');
+    API_KEY = 'DEMO_KEY';
+    apiKeyInput.value = '';
+    saveApiKeyBtn.textContent = 'Using demo key';
+    return;
+  }
+
+  API_KEY = enteredKey;
+  localStorage.setItem('nasaApiKey', enteredKey);
+  saveApiKeyBtn.textContent = 'Key saved';
+  setTimeout(() => {
+    saveApiKeyBtn.textContent = 'Save key';
+  }, 1800);
+});
 
 fetchBtn.addEventListener('click', () => {
   const startDate = startInput.value;
