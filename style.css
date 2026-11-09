@@ -6,17 +6,17 @@
 }
 
 :root {
-  --space-bg: #050b17;
-  --panel-bg: rgba(12, 21, 39, 0.74);
-  --panel-border: rgba(148, 163, 184, 0.28);
-  --nebula-1: #7c3aed;
-  --nebula-2: #0ea5e9;
-  --nebula-3: #f97316;
-  --text: #e2e8f0;
-  --muted: #cbd5e1;
+  --space-bg: #f4ecff;
+  --panel-bg: rgba(255, 255, 255, 0.72);
+  --panel-border: rgba(123, 92, 255, 0.18);
+  --nebula-1: #c4b5fd;
+  --nebula-2: #d8b4fe;
+  --nebula-3: #f9a8d4;
+  --text: #2e1d46;
+  --muted: #5a4b78;
   --accent: #8b5cf6;
-  --accent-strong: #38bdf8;
-  --button-text: #081420;
+  --accent-strong: #7c3aed;
+  --button-text: #1f1630;
 }
 
 html {
@@ -27,10 +27,10 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.38), transparent 16%),
-    radial-gradient(circle at 80% 10%, rgba(14, 165, 233, 0.32), transparent 20%),
-    radial-gradient(circle at 50% 80%, rgba(249, 115, 22, 0.18), transparent 22%),
-    linear-gradient(160deg, #020817 0%, #0a1328 30%, #101d3a 64%, #070d1c 100%);
+    radial-gradient(circle at 15% 20%, rgba(196, 181, 253, 0.8), transparent 20%),
+    radial-gradient(circle at 80% 10%, rgba(216, 180, 254, 0.7), transparent 22%),
+    radial-gradient(circle at 50% 80%, rgba(249, 168, 212, 0.4), transparent 24%),
+    linear-gradient(160deg, #f5f0ff 0%, #eadcff 32%, #e7d9ff 70%, #f6efff 100%);
   background-attachment: fixed;
   min-height: 100vh;
   padding: 28px 16px 52px;
@@ -60,8 +60,9 @@ h1 {
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #f8fbff;
-  text-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  color: #2b1f43;
+  text-shadow: 0 0 18px rgba(139, 92, 246, 0.25);
 }
 
 .logo {
